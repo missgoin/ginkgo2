@@ -258,6 +258,8 @@ struct policydb {
 	struct role_datum **role_val_to_struct;
 	struct user_datum **user_val_to_struct;
 	struct type_datum **type_val_to_struct_array;
+	
+	#define type_val_to_struct type_val_to_struct_array
 
 	/* type enforcement access vectors and transitions */
 	struct avtab te_avtab;
