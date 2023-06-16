@@ -651,7 +651,7 @@ static bool add_type(struct policydb *db, const char *type_name, bool attr)
 		return false;
 	}
 
-#if LINUX_VERSION_CODE >= KERNEL_VERSION(5, 1, 0) || 1
+#if LINUX_VERSION_CODE >= KERNEL_VERSION(5, 1, 0)
 	size_t new_size = sizeof(struct ebitmap) * db->p_types.nprim;
 	struct ebitmap *new_type_attr_map_array =
 		(krealloc(db->type_attr_map_array, new_size, GFP_ATOMIC));
